@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import avatar from "@/assets/avatar1.jpg";
-import CV from "@/assets/CV1.pdf";
+import CV from "@/assets/CV.pdf";
 export default function Hero() {
     const [isVisible, setIsVisible] = useState(false);
     
