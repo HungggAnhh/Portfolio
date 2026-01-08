@@ -1,3 +1,6 @@
+import img1 from "@/assets/image1.webp";
+import img2 from "@/assets/image2.webp";
+import img3 from "@/assets/image3.webp";
 export type Project = {
     id: string;
     name: string;
@@ -6,34 +9,46 @@ export type Project = {
     image: string; // path under /public or /src/assets
     repo?: string;
     demo?: string;
+    status: "Completed" | "In Progress";
+    year: string;
 };
 
 
 export const PROJECTS: Project[] = [
-    {
-        id: "askthemall",
-        name: "AskThemAll – Multi‑Model Q&A",
-        description: "Caculator-app.",
-        tech: ["Next.js", "TypeScript", "Tailwind", "MongoDB"],
-        image: "/projects/askthemall.png",
-        repo: "https://github.com/HungggAnhh/Caculator",
-        demo: "https://askthemall.example.com"
-    },
-    {
-        id: "movie-booking",
-        name: "Movie Booking",
-        description: "Website đặt vé phim: chọn ghế, thanh toán online, quản trị phim/suất chiếu.",
-        tech: ["React", "Node.js", "MySQL"],
-        image: "/projects/movie.png",
-        repo: "https://github.com/yourname/movie-booking",
-        demo: "https://movie-booking.example.com"
-    },
-    {
-        id: "smart-parking",
-        name: "Smart Parking (IoT)",
-        description: "Hệ thống bãi xe thông minh tích hợp cảm biến & dashboard web.",
-        tech: ["Arduino", "Express", "React"],
-        image: "/projects/parking.png",
-        repo: "https://github.com/yourname/smart-parking"
-    }
+   {
+    id: "calculator-app",
+    name: "calculator-app",
+    description:
+      "Calculator app built with React (frontend) and Tailwind CSS for a clean, intuitive interface.",
+    image: img1,
+    tech: ["React", "Node.js", "Tailwind CSS"],
+    repo: "https://github.com/HungggAnhh/Caculator",
+    demo: null,
+    status: "Completed",
+    year: "2025",
+  },
+  {
+    id: "Hệ Thống Quản Lý Phòng Trọ",
+    name: "Hệ Thống Quản Lý Phòng Trọ",
+    description:
+      "Room posting & search portal for renters: view room details, filter by price/area, save favorites.",
+    image: img2,
+    tech: ["React", "Clerk", "Axios", "Spring Boot", "MySQL"],
+    repo: "https://github.com/HungggAnhh/QLphongtro",
+    demo: null,
+    status: "Completed",
+    year: "2025",
+  },
+  {
+    id: "Weather Dashboard",
+    name: "Weather Dashboard",
+    description:
+      "E-commerce system with user roles, product management, orders, statistics and MoMo payment.",
+    image: img3,
+    tech: ["PHP", "Laravel", "MySQL", "Bootstrap"],
+    repo: "https://github.com/HungggAnhh/Flatshop",
+    demo: null,
+    status: "Completed",
+    year: "2024",
+  },
 ];
