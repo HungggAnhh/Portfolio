@@ -2,48 +2,6 @@ import { useState, useRef, useEffect, memo } from "react";
 import { Eye, Github, ExternalLink, Code, Calendar } from "lucide-react";
 import { PROJECTS } from "@/data/project";
 import type { Project } from "@/data/project";
-import img1 from "@/assets/image1.webp";
-import img2 from "@/assets/image2.webp";
-import img3 from "@/assets/image3.webp";
-
-const PROJECTS = [
-  {
-    id: 1,
-    name: "calculator-app",
-    description:
-      "Calculator app built with React (frontend) and Tailwind CSS for a clean, intuitive interface.",
-    image: img1,
-    tech: ["React", "Node.js", "Tailwind CSS"],
-    repo: "https://github.com/HungggAnhh/Caculator",
-    demo: null,
-    status: "Completed",
-    year: "2025",
-  },
-  {
-    id: 2,
-    name: "Hệ Thống Quản Lý Phòng Trọ",
-    description:
-      "Room posting & search portal for renters: view room details, filter by price/area, save favorites.",
-    image: img2,
-    tech: ["React", "Clerk", "Axios", "Spring Boot", "MySQL"],
-    repo: "https://github.com/HungggAnhh/QLphongtro",
-    demo: null,
-    status: "Completed",
-    year: "2025",
-  },
-  {
-    id: 3,
-    name: "Weather Dashboard",
-    description:
-      "E-commerce system with user roles, product management, orders, statistics and MoMo payment.",
-    image: img3,
-    tech: ["PHP", "Laravel", "MySQL", "Bootstrap"],
-    repo: "https://github.com/HungggAnhh/Flatshop",
-    demo: null,
-    status: "Completed",
-    year: "2024",
-  },
-];
 
 const SectionTitle = ({ title, subtitle }) => (
   <div className="text-center mb-16 space-y-4">
@@ -162,7 +120,7 @@ export default function Projects() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          {PROJECTS.map((project) => (
+          {PROJECTS.map((project: Project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
